@@ -1,6 +1,6 @@
 const immaginePrincipale = document.querySelector(".items");
 console.log(immaginePrincipale);
-const immagineDaScegliere = document.getElementById("wich_item")
+const immagineDaScegliere = document.querySelector(".wich_item")
 
 const items = [
     'img/01.jpg',
