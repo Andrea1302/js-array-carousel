@@ -34,9 +34,11 @@ let item = "";
 let whichItem = "";
 
 for ( let i = 0 ; i < items.length ; i++) {
-    item += `<img src="${items[i]}" alt="">`;
-    whichItem += `<img src="${items[i]}" alt="">`
+    item += `<img class="immagine" src="${items[i]}" alt="">`;
+    whichItem += `<img class="immagine_select" src="${items[i]}" alt="">`
 }   
 
 immaginePrincipale.innerHTML = item;
+document.getElementsByClassName("immagine")[0].classList.add("active"); 
 immagineDaScegliere.innerHTML = whichItem;
+document.getElementsByClassName("immagine_select")[0].classList.add("active");
