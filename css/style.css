@@ -16,20 +16,22 @@
 .items{
     width: 70%;
     height: 100%;
-    background-color: chartreuse;
-    display: none;
+    background-color: chartreuse; 
 }
 
 .which_one{
     width: 30%;
     height: 100%;
     background-color: darkgray;
+    display: flex;
+    flex-direction: column;
 }
 
 #wich_item{
-    width: 100%;
-    height: calc( 100% / 5 );
-    background-color: darkslateblue;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #avanti_indietro{
@@ -45,10 +47,22 @@
 
 
 
-.items.active{
+.items img.active{
     display: block;
 }
 
 .wich_item.active{
     display: block;
+}
+
+
+
+/* immagini  */
+.items img{
+    width: 100%;
+    height: 100%;
+}
+#wich_item img{
+    height: 100%;
+    width: 100%;
 }
