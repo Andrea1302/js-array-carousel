@@ -1,7 +1,7 @@
 const immaginePrincipale = document.querySelector(".items");
 console.log(immaginePrincipale);
 const immagineDaScegliere = document.querySelector(".wich_item")
-
+const prossimo = document.querySelector(".next");
 const items = [
     'img/01.jpg',
     'img/02.jpg',
@@ -42,3 +42,20 @@ immaginePrincipale.innerHTML = item;
 document.getElementsByClassName("immagine")[0].classList.add("active"); 
 immagineDaScegliere.innerHTML = whichItem;
 document.getElementsByClassName("immagine_select")[0].classList.add("active");
+
+
+let activeposition = 0 ;
+
+document.querySelector(".next").addEventListener("click",
+    function(){
+      activeposition = activeposition + 1;
+      console.log(activeposition);  
+
+      document.querySelector(".immagine.active").classList.remove("active");  
+      document.getElementsByClassName("immagine")[activeposition].classList.add("active"); 
+
+      document.querySelector(".immagine_select.active").classList.remove("active"); 
+      document.getElementsByClassName("immagine_select")[activeposition].classList.add("active");
+    }
+
+)
