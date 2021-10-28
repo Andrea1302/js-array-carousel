@@ -48,14 +48,37 @@ let activeposition = 0 ;
 
 document.querySelector(".next").addEventListener("click",
     function(){
-      activeposition = activeposition + 1;
-      console.log(activeposition);  
+
+        if ( activeposition < items.length - 1 ){
+            activeposition = activeposition + 1;
+            console.log(activeposition); 
+        } else {
+            activeposition = 0;
+        }
+        
+       
 
       document.querySelector(".immagine.active").classList.remove("active");  
       document.getElementsByClassName("immagine")[activeposition].classList.add("active"); 
 
       document.querySelector(".immagine_select.active").classList.remove("active"); 
       document.getElementsByClassName("immagine_select")[activeposition].classList.add("active");
+    }
+
+)
+
+let  backposition = "" ;
+
+document.querySelector(".back").addEventListener("click",
+    function (){
+        
+        
+        document.querySelector(".immagine.active").classList.remove("active");  
+        document.getElementsByClassName("immagine")[backposition].classList.add("active"); 
+
+        document.querySelector(".immagine_select.active").classList.remove("active"); 
+        document.getElementsByClassName("immagine_select")[backposition].classList.add("active");
+
     }
 
 )
