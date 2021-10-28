@@ -79,11 +79,11 @@ prossimo.addEventListener("click",
         
        
 
-      document.querySelector(".immagine.active").classList.remove("active");  
-      document.getElementsByClassName("immagine")[activeposition].classList.add("active"); 
+        document.querySelector(".immagine.active").classList.remove("active");  
+        document.getElementsByClassName("immagine")[activeposition].classList.add("active"); 
 
-      document.querySelector(".immagine_select.active").classList.remove("active"); 
-      document.getElementsByClassName("immagine_select")[activeposition].classList.add("active");
+        document.querySelector(".immagine_select.active").classList.remove("active"); 
+        document.getElementsByClassName("immagine_select")[activeposition].classList.add("active");
     }
 
 )
