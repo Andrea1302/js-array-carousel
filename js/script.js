@@ -1,3 +1,5 @@
+// Richiamo le classi e assegno una variabile 
+
 const immaginePrincipale = document.querySelector(".items");
 console.log(immaginePrincipale);
 const immagineDaScegliere = document.querySelector(".wich_item")
@@ -35,8 +37,13 @@ const text = [
 ];
 
 
+
+// variabili vuote 
 let item = "";
 let whichItem = "";
+
+
+// Creo stringa da aggiungere successivamente all html 
 
 for ( let i = 0 ; i < items.length ; i++) {
     item += `<img class="immagine" src="${items[i]}" alt="">`;
@@ -49,7 +56,16 @@ immagineDaScegliere.innerHTML = whichItem;
 document.getElementsByClassName("immagine_select")[0].classList.add("active");
 
 
+
+
+
+// Assegno variabile 0 per richiamare l indice dell array in seguito 
+            // Nel caso voglio quello successivo sarà activeposition + 1 
+            //  Nel caso voglio quello precedente sarà active position - 1 
 let activeposition = 0 ;
+
+
+// Al click vai avanti 
 
 prossimo.addEventListener("click",
     function(){
@@ -72,6 +88,10 @@ prossimo.addEventListener("click",
 
 )
 
+
+
+// Al click vai indietro 
+
 prima.addEventListener("click",
     function (){
 
@@ -92,3 +112,4 @@ prima.addEventListener("click",
     }
 
 )
+console.log(activeposition);
