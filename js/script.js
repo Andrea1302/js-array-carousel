@@ -2,6 +2,10 @@ const immaginePrincipale = document.querySelector(".items");
 console.log(immaginePrincipale);
 const immagineDaScegliere = document.querySelector(".wich_item")
 const prossimo = document.querySelector(".next");
+const prima = document.querySelector(".back")
+
+
+// Array immagini 
 const items = [
     'img/01.jpg',
     'img/02.jpg',
@@ -10,6 +14,8 @@ const items = [
     'img/05.jpg'
 ];
 
+
+// Array titoli 
 const title = [
     'Svezia',
     'Svizzera',
@@ -18,6 +24,8 @@ const title = [
     'Paradise'
 ];
 
+
+// Array text 
 const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
     'Lorem ipsum',
@@ -26,9 +34,6 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
 
-// // Immagini di default 
-// immaginePrincipale.innerHTML += `<img src="img/01.jpg" alt=""> `;
-// immagineDaScegliere.innerHTML += `<img src="img/01.jpg" alt="">`;
 
 let item = "";
 let whichItem = "";
@@ -46,7 +51,7 @@ document.getElementsByClassName("immagine_select")[0].classList.add("active");
 
 let activeposition = 0 ;
 
-document.querySelector(".next").addEventListener("click",
+prossimo.addEventListener("click",
     function(){
 
         if ( activeposition < items.length - 1 ){
@@ -67,17 +72,22 @@ document.querySelector(".next").addEventListener("click",
 
 )
 
-let  backposition = "" ;
-
-document.querySelector(".back").addEventListener("click",
+prima.addEventListener("click",
     function (){
+
+        if ( activeposition === 0){
+            activeposition = items.length -1 ;
+        } else {
+            activeposition = activeposition -1 ; 
+        }
+
         
         
         document.querySelector(".immagine.active").classList.remove("active");  
-        document.getElementsByClassName("immagine")[backposition].classList.add("active"); 
+        document.getElementsByClassName("immagine")[activeposition].classList.add("active"); 
 
         document.querySelector(".immagine_select.active").classList.remove("active"); 
-        document.getElementsByClassName("immagine_select")[backposition].classList.add("active");
+        document.getElementsByClassName("immagine_select")[activeposition].classList.add("active");
 
     }
 
